@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.3.3.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<groupId>com.springcloud</groupId>
+	<artifactId>springCloud-eureka-client</artifactId>
+	<version>1.0</version>
+	<packaging>war</packaging>
+	<name>springCloud-eureka-client</name>
+	<description>springcloud</description>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-dependencies</artifactId>
+			<version>Hoxton.SR1</version>
+			<type>pom</type>
+			<scope>import</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<defaultGoal>compile</defaultGoal>
+		<finalName>springCloud-eureka-client</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>UTF-8</encoding>
+					<compilerArguments>
+						<extdirs>${project.basedir}/src/main/webapp/WEB-INF/lib</extdirs>
+					</compilerArguments>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
