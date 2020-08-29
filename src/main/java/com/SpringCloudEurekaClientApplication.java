@@ -1,7 +1,6 @@
 package com;
 
 import org.springframework.boot.SpringApplication;
-
 @SpringBootApplication
 public class SpringCloudEurekaClientApplication {
 
